@@ -6,3 +6,4 @@ workflows:
     jobs:
       - docker/publish:
           deploy: false
+          image: jaquers/steamcmd
