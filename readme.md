@@ -8,5 +8,5 @@ ENV STEAM_APP_DIR /steamcmd/install
 ## Release
 
 ```bash
-make release 1.0.1
+./release.sh 1.0.1
 ```
