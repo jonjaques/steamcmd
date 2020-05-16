@@ -1,0 +1,18 @@
+version: 2.1
+orbs:
+  docker: circleci/docker@1.0.1
+workflows:
+  build-and-publish-docker-image:
+    jobs:
+      - docker/publish:
+          image: jaquers/steamcmd
+          use-docker-credentials-store: true
+          filters:
+            branches:
+              only:
+                - master
+  build-docker-image-only:
+    jobs:
+      - docker/publish:
+          deploy: false
+          image: jaquers/steamcmd
